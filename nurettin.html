@@ -1,82 +1,71 @@
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<link rel="stylesheet" href="dist/reset.css">
-		<link rel="stylesheet" href="dist/reveal.css">
-		<link rel="stylesheet" href="dist/theme/black.css">
+	<title>reveal.js</title>
 
-		<!-- Theme used for syntax highlighted code -->
-		<link rel="stylesheet" href="plugin/highlight/monokai.css">
-	</head>
-	<body>
-		<div class="reveal">
-			<div class="slides">
-                <section>
+	<link rel="stylesheet" href="dist/reset.css">
+	<link rel="stylesheet" href="dist/reveal.css">
+	<link rel="stylesheet" href="dist/theme/black.css">
+
+	<!-- Theme used for syntax highlighted code -->
+	<link rel="stylesheet" href="plugin/highlight/monokai.css">
+</head>
+
+<body>
+	<div class="reveal">
+		<div class="slides">
+			<section>
 				<a href="https://www.w3schools.com/css/">
-						<img src="photo.png" 
-                        alt="CSS LOGO" 
-                        style="height: 180px;
+					<img src="photo.png" alt="CSS LOGO" style="height: 180px;
                                margin: 0 auto 4rem auto;
                                background: transparent; 
                                border-radius: 10px;
-                               box-shadow: 0 0 10px white;" 
-                        class="Css-logo">
-					</a>
-					<h3>CSS presentation with Reveal.js</h3>
-					<p><small>Created by <a href="https://github.com/ciyabayhan?tab=repositories">Nurettin Bayhan</a></small></p>
-				</section>
+                               box-shadow: 0 0 10px white;" class="Css-logo">
+				</a>
+				<h3>CSS presentation with Reveal.js</h3>
+				<p><small>Created by <a href="https://github.com/ciyabayhan?tab=repositories">Nurettin
+							Bayhan</a></small></p>
+			</section>
 
-				<section>
-                    <h2 class="h2"
-                     style="color: rgb(255, 187, 0);
+			<section>
+				<h2 style="color: rgb(255, 187, 0);
                      font-weight: bold;
                      cursor: pointer;
 					border-bottom: 2px solid rgb(134, 43, 43); 
 					display: inline-block;">CSS</h2>
-                    <h3 class="h3"
-                    style="color: #62560a;
+				<h3 style="color: #62560a;
                     cursor: pointer;">what is CSS?</h3>
-                    <p class="p1"
-                    style="color: #62560a;
+				<p style="color: #62560a;
 					cursor: pointer;">CSS stands for <strong>Cascading Style Sheets.</strong></p>
-                    <p class="p1"
-                    style="color: #62560a;
+				<p style="color: #62560a;
 					cursor: pointer;">CSS used to style HTML elements</p>
-                </section>
+			</section>
 
-                <section>
-                    <h2 style="color: rgb(196, 156, 23);
+			<section>
+				<h2 style="color: rgb(196, 156, 23);
 					cursor: pointer;">Why do we use CSS</h2>
-					<ul>
-						<li style="color: #c3dd3e; 
-						border-bottom: 1px 
-						solid rgb(255, 255, 255);
-						justify-content: center;">To add colors</li><br>
+				<ul>
+					<li style="color: #f39600;">To add colors</li><br>
 
-						<li style="color: #c3dd3e; 
-						border-bottom: 1px 
-						solid rgb(255, 255, 255);">To control layout</li><br>
+					<li style="color: #f39600;">To control layout</li><br>
 
-						<li style="color: #c3dd3e; 
-						border-bottom: 1px 
-						solid rgb(255, 255, 255);">To make website beautiful</li>
-					</ul>
-                </section>
+					<li style="color: #f39600;">To make website beautiful</li>
+				</ul>
+			</section>
 
-				<section>
-					<h2 style="color: rgb(196, 156, 23);
+			<section>
+				<h2 style="color: rgb(196, 156, 23);
 					cursor: pointer;">How to add CSS</h2>
-					<p style="color: orangered;">External CSS</p>
-					<pre><code>
+				<p style="color: orangered;">External CSS</p>
+				<pre><code>
 						<link rel="stylesheet" href="style.css">
 					</code></pre><br>
-					<p style="color: orangered;">internal CSS</p>
-					<pre data-id="code-animation"><code class="css" data-trim data-line-numbers>
+				<p style="color: orangered;">internal CSS</p>
+				<pre data-id="code-animation"><code class="css" data-trim data-line-numbers>
 						<style>
 						body {
 							color: aqua;
@@ -86,37 +75,81 @@
 							font-size: large;
 						}
 						</style>	
-				    </code></pre>		
-			    </section>
+				    </code></pre>
+			</section>
 
-				<section>
-					<h3 style="color: orange;">- CSS Selectors -</h3>
-					<figcaption>How CSS selects HTML elements?</figcaption> 
-					<figure>
-					<img src="images.jpg" alt="img" 
-					style="cursor: pointer;
+			<section>
+				<a href="https://www.w3schools.com/css/css_selectors.asp">css-selectors</a>
+				<h3 style="color: orange;">- CSS Selectors -</h3>
+				<p> How CSS selects HTML elements?</p>
+				<figure>
+					<img src="images.jpg" alt="img" style="cursor: pointer;
 					border-radius: 50px;
 					width: 500px;">
-					</figure>
-				</section>
+				</figure>
+			</section>
 
-			</div>
+			<section>
+				<h2>Element selector</h2>
+				<p>selects all HTML elements of a specific type</p>
+				<pre><code>
+						p { 
+							color: red;
+						}
+					 </code></pre>
+			</section>
+
+			<section>
+				<h2>Class Selector</h2>
+				<p style="color: orangered;">selects all elements that have a specific class attribute</p>
+				<pre><code>
+						.box {
+							background-color:blue;
+						}	
+					</code></pre>
+			</section>
+
+			<section>
+				<h2>ID Selector</h2>
+				<p style="color: orangered;">selects a single unique element that has a specific id attribute</p>
+				<pre><code>
+						#header {
+							background-color:gray;
+						}
+					</code></pre>
+			</section>
+
+			<section>
+				<h2>Pseudo-class Selector</h2>
+				<p>defines a special state of an element</p>
+				<p style="color: orangered;">(Hover, Active, Visited)</p>
+				<pre><code>
+						a:hover {
+							color: white;
+							background-color: blue;
+
+						}
+					</code></pre>
+			</section>
+
 		</div>
+	</div>
 
-		<script src="dist/reveal.js"></script>
-		<script src="plugin/notes/notes.js"></script>
-		<script src="plugin/markdown/markdown.js"></script>
-		<script src="plugin/highlight/highlight.js"></script>
-		<script>
-			// More info about initialization & config:
-			// - https://revealjs.com/initialization/
-			// - https://revealjs.com/config/
-			Reveal.initialize({
-				hash: true,
+	<script src="dist/reveal.js"></script>
+	<script src="plugin/notes/notes.js"></script>
+	<script src="plugin/markdown/markdown.js"></script>
+	<script src="plugin/highlight/highlight.js"></script>
+	<script>
+		// More info about initialization & config:
+		// - https://revealjs.com/initialization/
+		// - https://revealjs.com/config/
+		Reveal.initialize({
+			hash: true,
 
-				// Learn about plugins: https://revealjs.com/plugins/
-				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
-			});
-		</script>
-	</body>
+			// Learn about plugins: https://revealjs.com/plugins/
+			plugins: [RevealMarkdown, RevealHighlight, RevealNotes]
+		});
+	</script>
+</body>
+
 </html>
