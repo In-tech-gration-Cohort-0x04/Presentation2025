@@ -1,0 +1,420 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>JavaScript Syntax - Reveal.js Presentation</title>
+
+    <link rel="stylesheet" href="dist/reset.css">
+    <link rel="stylesheet" href="dist/reveal.css">
+    <link rel="stylesheet" href="dist/theme/black.css">
+
+    <!-- Theme used for syntax highlighted code -->
+    <link rel="stylesheet" href="plugin/highlight/monokai.css">
+
+    <style>
+        .js-logo {
+            height: 180 px;
+            margin: 0 auto 4 rem auto;
+            background: transparent;
+            border-radius: 10 px;
+            box-shadow: 0 0 10 px white;
+        }
+
+        .code-example {
+            background: #2d2d2d;
+            padding: 15 px;
+            border-radius: 10 px;
+            margin-top: 20 px;
+            text-align: left;
+            font-size: 2 rem;
+        }
+       
+        .two-columns {
+            display: grid;
+            grid-template-columns: 1 fr 1 fr;
+            gap: 20 px;
+            font-size: 1.7 rem;           
+        }
+
+        .concept-box {
+            background: rgba (255, 255, 255, 0.1);
+            padding: 15 px;
+            border-radius: 10 px;
+            border: 1 px solid rgba (255, 255, 255, 0.2);          
+        }
+
+        .important-note {
+            color: #ff6b6b;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="reveal">
+        <div class="slides">
+            <!-- Title Slide -->
+            <section>
+                <a href="https://www.w3schools.com/js/">
+                    <img src="https://www.w3schools.com/Js/img_javascript_480.jpg" alt="JAVASCRIPT LOGO"
+                        class="js-logo">
+                </a>
+                <h3>JavaScript Syntax Fundamentals</h3>
+                <p><small>Created by <a href="https://github.com/KarinaR-Ch">Karina Repinaska-Churkina</a></small></p>
+           </section>
+
+            <!-- Table of Contents -->
+            <section>
+                <h2>Table of Contents</h2>
+                <ul>
+                    <li>JavaScript Variables</li>
+                    <li>JavaScript Operators</li>
+                    <li>JavaScript Expressions</li>
+                    <li>JavaScript Keywords</li>
+                    <li>JavaScript Comments</li>
+                    <li>JavaScript Identifiers</li>
+                    <li>Case Sensitivity</li>
+                    <li>Camel Case Convention</li>
+                    <li>Character Set</li>
+                </ul>
+            </section>
+
+            <!-- JavaScript Variables -->
+            <section>
+                <section>
+                    <h2>JavaScript Variables</h2>
+                    <p>Variables are containers for storing data values</p>
+                    <div class="code-example">
+                        <pre><code class="javascript" data-trim data-line-numbers>
+                            // Variable declarations
+                            let message = "Hello, World!";
+                            const PI = 3.14159;
+                            var oldVariable = "Deprecated way";
+
+                            // Using variables
+                            console.log(message); // Output: Hello, World!
+                            console.log(PI);      // Output: 3.14159
+                        </code></pre>
+                    </div>
+                </section>
+                <section>
+                    <h3>Variable Types</h3>
+                    <div class="two-columns">
+                        <div class="concept-box">
+                            <h4>let</h4>
+                            <p>Block-scoped, can be reassigned</p>
+                            <pre><code class="javascript" data-trim>
+                                let count = 10;
+                                count = 20; // OK
+                            </code></pre>
+                        </div>
+                        <div class="concept-box">
+                            <h4>const</h4>
+                            <p>Block-scoped, cannot be reassigned</p>
+                            <pre><code class="javascript" data-trim>
+                                const gravity = 9.8;
+                                gravity = 10; // Error!
+                            </code></pre>
+                        </div>
+                    </div>
+                </section>
+            </section>
+
+            <!-- JavaScript Operators -->
+            <section>
+                <section>
+                    <h2>JavaScript Operators</h2>
+                    <p>Operators are used to perform operations on variables and values</p>
+                </section>
+                <section>
+                    <h3>Types of Operators</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Operator Type</th>
+                                <th>Examples</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Arithmetic</td>
+                                <td>+ - * / % **</td>
+                            </tr>
+                            <tr>
+                                <td>Assignment</td>
+                                <td>= += -= *= /=</td>
+                            </tr>
+                            <tr>
+                                <td>Comparison</td>
+                                <td> == === != !== &gt; &lt; </td>
+                            </tr>
+                            <tr>
+                                <td>Logical</td>
+                                <td>&& || !</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+                <section>
+                    <h3>Operator Examples</h3>
+                    <div class="code-example">
+                        <pre><code class="javascript" data-trim data-line-numbers>
+                            // Arithmetic operators
+                            let sum = 10 + 5;        // 15
+                            let product = 10 * 5;    // 50
+                            let remainder = 10 % 3;  // 1
+
+                            // Comparison operators
+                            let isEqual = (10 == "10");   // true (loose equality)
+                            let isStrictEqual = (10 === "10"); // false (strict equality)
+
+                            // Logical operators
+                            let isAdult = true;
+                            let hasLicense = false;
+                            let canDrive = isAdult && hasLicense; // false
+                        </code></pre>
+                    </div>
+                </section>
+            </section>
+
+            <!-- JavaScript Expressions -->
+            <section>
+                <h2>JavaScript Expressions</h2>
+                <p>An expression is a combination of values, variables, and operators</p>
+                <div class="code-example">
+                    <pre><code class="javascript" data-trim data-line-numbers>
+                        // Different types of expressions
+                        let arithmetic = 5 * (10 + 3); // 65
+                        let stringExp = "Hello" + " " + "World"; //"Hello World"
+                        let booleanExp = (5 &gt; 3);   // true
+                        let functionCall = Math.max(10, 20, 15); // 20
+                    </code></pre>
+                </div>
+            </section>
+
+            <!-- JavaScript Keywords -->
+            <section>
+                <h2>JavaScript Keywords</h2>
+                <p>Reserved words that have special meaning in JavaScript</p>
+                <div class="two-columns">
+                    <div>
+                        <h5>Declaration Keywords</h5>
+                        <ul>
+                            <li><code>let</code> - declare variables</li>
+                            <li><code>const</code> - declare constants</li>
+                            <li><code>var</code> - old way to declare variables</li>
+                            <li><code>function</code> - declare functions</li>
+                            <li><code>class</code> - declare classes</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h5>Control Flow Keywords</h5>
+                        <ul>
+                            <li><code>if</code>, <code>else</code></li>
+                            <li><code>for</code>, <code>while</code>, <code>do</code></li>
+                            <li><code>switch</code>, <code>case</code></li>
+                            <li><code>break</code>, <code>continue</code></li>
+                            <li><code>return</code></li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- JavaScript Comments -->
+            <section>
+                <section>
+                    <h2>JavaScript Comments</h2>
+                    <p>Comments are used to explain code and make it more readable</p>
+                    <div class="code-example">
+                        <pre><code class="javascript" data-trim data-line-numbers>
+                            // This is a single-line comment
+                            /*
+                            This is a multi-line comment
+                            It can span multiple lines
+                            */
+                            let price = 100; // Price in dollars
+                            /**
+                            * Function to calculate total price
+                            * @param {number} quantity - Number of items
+                            * @returns {number} Total price
+                            */
+                            function calculateTotal(quantity) {
+                                return price * quantity;
+                            }
+                        </code></pre>
+                    </div>
+                </section>
+                <section>
+                    <h3>Commenting Best Practices</h3>
+                    <ul>
+                        <li>Explain <strong>why</strong>, not what</li>
+                        <li>Use JSDoc for functions</li>
+                        <li>Keep comments up-to-date</li>
+                        <li>Avoid obvious comments</li>
+                        <li>Use comments for complex logic</li>
+                    </ul>
+                </section>
+            </section>
+
+            <!-- JavaScript Identifiers -->
+            <section>
+                <h2>JavaScript Identifiers</h2>
+                <p>Names used to identify variables, functions, objects, etc.</p>
+                <div class="two-columns">
+                    <div class="concept-box">
+                        <h4>Valid Identifiers</h4>
+                        <pre><code class="javascript" data-trim>
+                            let firstName;
+                            let _privateVar;
+                            let $price;
+                            let user123;
+                            let camelCaseName;
+                        </code></pre>
+                    </div>
+                    <div class="concept-box">
+                        <h4>Invalid Identifiers</h4>
+                        <pre><code class="javascript" data-trim>
+                            let 123user;      // Cannot start with number
+                            let first-name;   // Hyphen not allowed
+                            let let;          // Reserved keyword
+                            let first name;   // Space not allowed
+                        </code></pre>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Case Sensitivity -->
+            <section>
+                <h2>Case Sensitivity</h2>
+                <p class="important-note">JavaScript is CASE-SENSITIVE!</p>
+                <div class="code-example">
+                    <pre><code class="javascript" data-trim data-line-numbers>
+                        let myVariable = "Hello";
+                        let myvariable = "World";
+
+                        console.log(myVariable); // "Hello"
+                        console.log(myvariable); // "World"
+                        // These are TWO DIFFERENT variables!
+
+                        // Function names are also case-sensitive
+                        function calculateTotal() { /* ... */ }
+                        function CalculateTotal() { /* ... */ }
+                        // These are TWO DIFFERENT functions!
+                    </code></pre>
+                </div>
+            </section>
+
+            <!-- Camel Case Convention -->
+            <section>
+                <section>
+                    <h2>Camel Case Convention</h2>
+                    <p>The standard naming convention in JavaScript</p>
+                    <div class="code-example">
+                        <pre><code class="javascript" data-trim data-line-numbers>
+                            // Variables and functions - camelCase
+                            let firstName = "John";
+                            let totalAmount = 100;
+                            function calculateTotalPrice() { /* ... */ }
+
+                            // Constants - UPPER_SNAKE_CASE
+                            const MAX_USERS = 100;
+                            const API_KEY = "abc123";
+
+                            // Classes - PascalCase
+                            class UserAccount { /* ... */ }
+                            class ShoppingCart { /* ... */ }
+
+                            // Private variables - _leadingUnderscore
+                            let _privateData = "secret";
+                        </code></pre>
+                    </div>
+                </section>
+                <section>
+                    <h3>Naming Conventions Comparison</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Type</th>
+                                <th>Convention</th>
+                                <th>Example</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Variables</td>
+                                <td>camelCase</td>
+                                <td><code>userName</code></td>
+                            </tr>
+                            <tr>
+                                <td>Functions</td>
+                                <td>camelCase</td>
+                                <td><code>getUserData()</code></td>
+                            </tr>
+                            <tr>
+                                <td>Classes</td>
+                                <td>PascalCase</td>
+                                <td><code>UserProfile</code></td>
+                            </tr>
+                            <tr>
+                                <td>Constants</td>
+                                <td>UPPER_SNAKE_CASE</td>
+                                <td><code>MAX_SIZE</code></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+            </section>
+
+            <!-- Character Set -->
+            <section>
+                <h2>Character Set</h2>
+                <p>JavaScript uses the <strong>Unicode</strong> character set</p>
+                <div class="two-columns">
+                    <div class="concept-box">
+                        <h4>Unicode Support</h4>
+                        <ul>
+                            <li>Supports all languages</li>
+                            <li>Emojis in strings</li>
+                            <li>Special characters</li>
+                            <li>Escape sequences</li>
+                        </ul>
+                    </div>
+                    <div class="concept-box">
+                        <h4>Examples</h4>
+                        <pre><code class="javascript" data-trim>
+                            let name = "Jose";      // Latin characters
+                            let greeting = "Hello! 👋"; // With emoji
+                            let price = "100€";     // Euro symbol
+                            let escape = "Line 1\nLine 2"; // New line
+                        </code></pre>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Thank you -->
+            <section>
+
+                <p>Thank you for your attention!</p>
+
+            </section>
+        </div>
+    </div>
+
+    <script src="dist/reveal.js"></script>
+    <script src="plugin/notes/notes.js"></script>
+    <script src="plugin/markdown/markdown.js"></script>
+    <script src="plugin/highlight/highlight.js"></script>
+    <script>
+        Reveal.initialize({
+            hash: true,
+            plugins: [RevealMarkdown, RevealHighlight, RevealNotes],
+            transition: 'slide',
+            backgroundTransition: 'fade'
+        });
+    </script>
+</body>
+
+</html>
