@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>reveal.js</title>
+
+    <link rel="stylesheet" href="dist/reset.css" />
+    <link rel="stylesheet" href="dist/reveal.css" />
+    <link rel="stylesheet" href="dist/theme/black.css" />
+
+    <!-- Theme used for syntax highlighted code -->
+    <link rel="stylesheet" href="plugin/highlight/monokai.css" />
+    <style>
+      .title {
+        background: linear-gradient(to right, cyan, blue);
+        color: whitesmoke; /* The same Blue color */
+        text-shadow: 0px 0px 20px cyan; /* Creates a soft glow effect */
+        text-transform: uppercase;
+      }
+      h3 {
+        color: gold !important;
+
+        font-style: italic;
+      }
+      li {
+        background: rgb(56, 50, 50);
+        padding: 10px;
+        border-left: 5px solid rgb(255, 0, 38);
+        margin: 5px;
+      }
+      em {
+        color: yellow;
+      }
+      strong {
+        color: #00f2fe;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section>
+          Slide 1
+          <h1 class="title">How the internet and Browser Works</h1>
+          <h3 class="name">By Mac Thartcher</h3>
+          <p>WDX180 Phase 1 Contribution</p>
+        </section>
+
+        <section>
+          Slide 2
+          <h2>TABLE OF CONTENTS</h2>
+          <ul>
+            <li class="fragment">Website and Servers</li>
+            <li class="fragment">Hosting</li>
+            <li class="fragment">IP Addresses and URLs</li>
+            <li class="fragment">Anatomy of a URL</li>
+            <li class="fragment">the Role of DNS</li>
+          </ul>
+        </section>
+        <section>
+          Slide 3
+          <h2>What is a Website?</h2>
+          <p>
+            A website is a collection of web pages and related content that is
+            identified by a common domain name and published on at least one web
+            server. Examples of websites include Wikipedia, Amazon, and YouTube.
+          </p>
+        </section>
+        <section>
+          Slide 4
+          <h2>What is a Server?</h2>
+          <p>
+            A <strong>server</strong> is a computer or system that provides
+            resources, data, or services to other computers or systems over a
+            network. In the context of the web, servers host websites and
+            respond to requests from web browsers.
+          </p>
+        </section>
+        <section>
+          Slide 5
+          <h2>What is Hosting?</h2>
+          <p>
+            <strong>Hosting</strong> refers to the service of providing storage
+            space and access for websites on a server. Web hosting companies
+            offer various plans that allow individuals and organizations to make
+            their websites accessible on the internet.
+          </p>
+        </section>
+        <section>
+          Slide 6
+          <h2>IP Addresses and URLs</h2>
+          <p><strong>IP</strong> stands for <em>"Internet Protocol"</em></p>
+          <p>
+            It is a unique address (eg 192.185.1.38)that identifies a device so
+            other machines can find it.
+          </p>
+          <p>
+            <strong>URL</strong> stands for "Uniform Resource Locator"is the web
+            address used to locate a resource
+          </p>
+        </section>
+        <section>
+          slide 7
+          <h2 class="title">Anatomy of a URL</h2>
+
+          <img
+            src="https://developer.mozilla.org/en-US/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_URL/mdn-url-all.png"
+            alt="MDN URL Anatomy"
+            style="
+              width: 850px;
+              background: white;
+              border-radius: 10px;
+              padding: 15px;
+            "
+          />
+
+          <p>
+            A URL is more than just a name; it's a complete set of instructions.
+          </p>
+        </section>
+        <section>
+          slide 8
+          <h2 class="title">The DNS Process</h2>
+          <img
+            src="https://www.cloudflare.com/img/learning/dns/what-is-dns/dns-lookup-diagram.png"
+            alt="Cloudflare DNS Lookup Flow"
+            style="
+              width: 600px;
+              background: white;
+              border-radius: 10px;
+              padding: 10px;
+            "
+          />
+          <p>
+            The <strong>Resolver</strong> talks to the Root, TLD, and
+            Authoritative servers.
+          </p>
+        </section>
+        <section>
+          slide 9
+          <h2>How does the DNS work?</h2>
+
+          <p>
+            <strong>DNS</strong> stands for <em>"Domain Name System"</em>. It's
+            like asking a librarian for a book:
+          </p>
+          <ol>
+            <li class="fragment">You type the name (Domain).</li>
+            <li class="fragment">
+              The Browser asks the <strong>DNS Resolver</strong> for the
+              "address".
+            </li>
+            <li class="fragment">
+              Once it gets the IP, it finds the server and shows you the site.
+            </li>
+          </ol>
+          <p class="title">Thank you!</p>
+        </section>
+      </div>
+    </div>
+
+    <script src="dist/reveal.js"></script>
+    <script src="plugin/notes/notes.js"></script>
+    <script src="plugin/markdown/markdown.js"></script>
+    <script src="plugin/highlight/highlight.js"></script>
+    <script>
+      // More info about initialization & config:
+      // - https://revealjs.com/initialization/
+      // - https://revealjs.com/config/
+      Reveal.initialize({
+        hash: true,
+
+        // Learn about plugins: https://revealjs.com/plugins/
+        plugins: [RevealMarkdown, RevealHighlight, RevealNotes],
+      });
+    </script>
+  </body>
+</html>
